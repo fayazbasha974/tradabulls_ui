@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+// $background: #f1f3f6;
+// $background: #f1f3f6;
+// $background: #f3f4f6;
+// $background: #ffffff;
+// $boxShadow: inset 0 0 5px rgba(55, 84, 170, 0), 
+// inset 0 0 10px rgba(255, 255, 255, 0), 
+// 5px 5px 9px rgba(0, 0, 0, 0.1), 
+// -5px -5px 11px white, 
+// inset 0px 0px 2px rgba(255, 255, 255, 0.2);
+
+// $background: #ffffff;
+// $boxShadow: inset 5px 5px 10px #b5b5b5, 
+//             inset 5px 5px 10px #ffffff;
+
+$background : #ececec;
+$boxShadow: -10px -10px 15px rgb(255 255 255 / 55%), 10px 10px 15px rgb(70 70 70 / 12%);
+$boxShadow2: inset -10px -10px 15px rgb(255 255 255 / 55%), inset 10px 10px 15px rgb(70 70 70 / 12%);
+body{
+    font-family: 'Poppins', sans-serif;
+    background: $background;
+}
+.nm-card{
+    width: 100%;
+    border-radius: 10px;
+    background: $background;
+    box-shadow: $boxShadow;
+    // box-shadow: 
+    // inset 0 0 5px rgba(55, 84, 170, 0), 
+    // inset 0 0 10px rgba(255, 255, 255, 0), 
+    // 5px 5px 9px rgba(55, 84, 170, 0.15), 
+    // -5px -5px 11px white, 
+    // inset 0px 0px 2px rgba(255, 255, 255, 0.2);
+}
+.nm-card .equity-title{
+
+    font-size: 20px;
+    color: #1C3578;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.nm-card .equity-total{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px 5px 0px;
+    color: #4788ff!important;
+}
+.nm-card .equity-change{
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: max-content;
+}
+.nm-card .equity-change i{
+    font-size: 18px;
+    font-weight: 700 !important;
+}
+.nm-card .equity-change.down{
+    background-color: rgba(237,76,120,.1)!important;
+    color: rgb(237,76,120);
+    border-radius: 5px;
+}
+.nm-card .equity-change.up{
+    background-color: rgba(0,201,167,.1)!important;
+    color: rgb(0,201,167);
+    border-radius: 5px;
+}
+.nm-card .equity-from{
+    font-size: 20px;
+    font-weight: 500;
+}
+@media screen and (max-width:1400px) and (min-width:1200px) {
+    .nm-card{
+        height: 150px;
+        justify-content: space-around;
+    }
+}
+.equity-details{
+width: 100%;
+height: 550px;
+border-radius: 10px;
+background: $background;
+box-shadow: $boxShadow
+}
+.equity-details-tabs{
+max-width: max-content;
+border-radius: 0px 0px 0px 20px;
+// box-shadow: 
+// inset 0 0 5px rgba(55, 84, 170, 0), 
+// inset 0 0 10px rgba(255, 255, 255, 0), 
+// 5px 5px 9px rgba(55, 84, 170, 0.15), 
+// -5px -5px 11px white, 
+// inset 0px 0px 2px rgba(255, 255, 255, 0.2);
+}
+.equity-tab .nav-link{
+    color: #1C3578 !important;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: $boxShadow;
+    border-radius: 20px;
+    &:hover, .active {
+        box-shadow: $boxShadow2
+    };
+}
+
+// .nav-link:hover {
+//     box-shadow: $bo
+// }
+.equity-tab .active{
+    box-shadow: $boxShadow2
+}
+
+
+.equity-company-list{
+height: 425px;
+padding: 0px 10px;
+overflow-y: auto;
+}
+.equity-company-list::-webkit-scrollbar
+{
+width: 7px;
+background-color: #F5F5F5;
+}
+
+.equity-company-list::-webkit-scrollbar-thumb{
+    border-radius: 7px;
+    background-color: #FFF;
+    background-image: -webkit-gradient(linear,40% 0%,75% 84%,from(#1c3578d7),to(#1c3578c8),color-stop(.6,#1c3578d0))
+}
+
+.equity-company-list .list-group-item{
+    background: $background;
+    margin-bottom: 10px;
+    color: #1C3578;
+    border-radius: 7px;
+    border: 0;
+    &:hover {
+        color: #fff;
+        background-color: #1C3578;
+    }
+    // box-shadow: 
+    // inset 0 0 5px rgba(55, 84, 170, 0), 
+    // inset 0 0 10px rgba(255, 255, 255, 0), 
+    // 5px 5px 9px rgba(55, 84, 170, 0.15), 
+    // -5px -5px 11px white, 
+    // inset 0px 0px 2px rgba(255, 255, 255, 0.2);
+}
+.equity-change {
+padding: 5px 10px;
+font-size: 14px;
+font-weight: 500;
+max-width: max-content;
+}
+.equity-change.down {
+background-color: rgba(237,76,120,.1)!important;
+color: rgb(237,76,120);
+border-radius: 5px;
+}
+.equity-change.up {
+background-color: rgba(0,201,167,.1)!important;
+color: rgb(0,201,167);
+border-radius: 5px;
+}
+
+.equity-company-list .list-group-item.active{
+color: #fff;
+background-color: #1C3578;
+}
+
+.ui-card{
+    // padding: 10px;
+    border-radius: 10px;
+    box-shadow: $boxShadow
+}
+.equity-data-table{
+// padding: 10px;
+height: 425px;
+border-radius: 10px;
+box-shadow: 
+inset 0 0 5px rgba(55, 84, 170, 0), 
+inset 0 0 10px rgba(255, 255, 255, 0), 
+5px 5px 9px rgba(55, 84, 170, 0.15), 
+-5px -5px 11px white, 
+inset 0px 0px 2px rgba(255, 255, 255, 0.2);
+}
+
+// .m-t-5 {
+//     margin-top: 5rem;
+// }
+
+//padding
+.p-r-30 { padding-right: 30px };
+.p-l-30 { padding-left: 30px };
+.p-t-30 { padding-top: 30px };
+.p-b-30 { padding-bottom: 30px };
+
+$padding: 60;
+
+@for $i from 1 through $padding {
+    .p-r-#{$i} {padding-right: #{$i}+ 'px';}
+    .p-l-#{$i} {padding-left: #{$i}+ 'px';}
+    .p-b-#{$i} {padding-bottom: #{$i}+ 'px';}
+    .p-t-#{$i} {padding-top: #{$i}+ 'px';}
+
+    .m-r-#{$i} {margin-right: #{$i}+ 'px';}
+    .m-l-#{$i} {margin-left: #{$i}+ 'px';}
+    .m-b-#{$i} {margin-bottom: #{$i}+ 'px';}
+    .m-t-#{$i} {margin-top: #{$i}+ 'px';}
+}
+
+//flex layout
+.d-flex {
+    display: flex
+}
+.f-d-row {flex-direction: row}
+.f-d-column {flex-direction: column}
+
+a {
+    cursor: pointer;
+}

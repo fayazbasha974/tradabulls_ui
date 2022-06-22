@@ -1,0 +1,24 @@
+.nse-header {
+    background: red;
+    border-top-left-radius: 10px;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    // height: 75px;
+}
+
+.nse-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px dashed lightgray;
+    .label {
+        color: blue
+    }
+}
+.nse-items :last-child {
+    border-bottom: none
+}

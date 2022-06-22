@@ -1,0 +1,19 @@
+<div class="container-fluid p-r-50 p-l-50">
+    <div class="row m-t-30 d-flex justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 my-3" *ngFor="let equity of equitiesList">
+            <div class="nm-card p-3 d-flex flex-column ">
+                <h2 class="equity-title">{{equities[equity]}}</h2>
+                <!-- <span class="equity-from">70,000.35</span> -->
+                <div class="d-flex justify-content-between mt-4">
+                    <span class="equity-total">{{equityData[equity].last_price}}</span>
+                    <ng-container *ngIf="equityData[equity].last_price >= equityData[equity].ohlc.open">
+                        <span class="equity-change up"><i class="bi bi-graph-up-arrow"></i> {{getDifference(equityData[equity])}}</span>
+                    </ng-container>
+                    <ng-container *ngIf="equityData[equity].last_price < equityData[equity].ohlc.open">
+                        <span class="equity-change down"><i class="bi bi-graph-down-arrow"></i> {{getDifference(equityData[equity])}}</span>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

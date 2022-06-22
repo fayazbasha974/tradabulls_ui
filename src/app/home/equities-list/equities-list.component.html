@@ -1,0 +1,86 @@
+<div class="container-fluid m-t-20 p-l-50 p-r-50">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="equity-detailss">
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-end">
+                        <ul class="nav  equity-details-tabs py-3 px-3">
+                            <li class="nav-item equity-tab ms-4">
+                                <a class="nav-link" (click)="onTabChange('equity')" [class.active]="selectedTab === 'equity'">Equity</a>
+                            </li>
+                            <li class="nav-item equity-tab ms-4">
+                                <a class="nav-link" (click)="onTabChange('equityFO')" [class.active]="selectedTab === 'equityFO'">Equity (F & O)</a>
+                            </li>
+                            <li class="nav-item equity-tab ms-4">
+                                <a class="nav-link" (click)="onTabChange('commodities')" [class.active]="selectedTab === 'commodities'">Commodities</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 equity-details-data">
+                        <div class="row">
+                            <div class="col-lg-4 ps-0">
+                                <div class="list-group equity-company-list">
+                                    <a class="list-group-item list-group-item-action equity-list-item"
+                                        aria-current="true" *ngFor="let equity of equitiesList" (click)="onEquitySelect({equity, data: equityData[equity]})"
+                                        [class.active]="equity === selectedEquity.equity">
+                                        <h5 class="mb-1 ">{{equityData[equity].name}}</h5>
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <span>{{equityData[equity].last_price}}</span>
+                                            <span class="equity-change down"><i class="bi bi-graph-down-arrow"></i>
+                                                (-2.44%)</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 px-0">
+                                <div class="ui-card row" style="height:425px">
+                                    <div class="col-6 row" *ngIf="selectedEquity.equity">
+                                        <div class="nse-header">
+                                            <span>NSE </span>
+                                            <span> {{selectedEquity.data.last_price}}</span>
+                                        </div>
+                                        <div class="nse-items">
+                                                <span class="label">OPEN PRICE</span>
+                                                    <span id="nse_per_change" class="value">{{selectedEquity.data.ohlc.open}}</span>
+                                        </div>
+                                        <div class="nse-items">
+                                                <span class="label">HIGN PRICE</span>
+                                                <span id="nse_per_change" class="value">{{selectedEquity.data.ohlc.high}}</span>
+                                        </div>
+                                        <div class="nse-items">
+                                                <span class="label">LOW PRICE</span>
+                                                <span id="nse_per_change" class="value">{{selectedEquity.data.ohlc.low}}</span>
+                                        </div>
+                                        <div class="nse-items">
+                                                <span class="label">CLOSE PRICE</span>
+                                                <span id="nse_per_change" class="value">{{selectedEquity.data.ohlc.close}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 row">
+
+                                            <div class="nse-items">
+                                                    <span class="label">VOLUME</span>
+                                                    <span id="nse_per_change" class="value text-danger">-11.25 (-3.81%)</span>
+                                            </div>
+                                            <div class="nse-items">
+                                                    <span class="label">52 WK  LOW($)</span>
+                                                    <span id="nse_per_change" class="value text-success">-11.25 (-3.81%)</span>
+                                            </div>
+                                            <div class="nse-items">
+                                                    <span class="label">52 WK  HIGH($)</span>
+                                                    <span id="nse_per_change" class="value text-danger">-11.25 (-3.81%)</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
